@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Novo Imovel{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--    <h1>Adicionar novo imóvel</h1>
+    <p id="demo">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <button id="about-btn"> Click Me - I'm Javascript on Speed</button> -->
+    <form method="post" name="novoImovel">{% csrf_token %}
+        <table>
+            {{ form }}
+           <!-- <div class="rural" id="rural_form"> {{ form_rural }} </div>
+            <div class="urbano" id="urbano_form_"> {{ form_urbano }} </div>
+            <div class="publico" id="publico_form"> {{ form_publico }} </div>
+            {{ form_cidade }}
+            <div class="pf"> {{ form_pf }} </div>
+            <div class="pj"> {{ form_pj }} </div>
+            <input type="radio" id="rural" name="ruralOuUrbano" value="rural">
+            <label for="rural">Rural</label><br>
+            <input type="radio" id="urbano" name="ruralOuUrbano" value="urbano">
+            <label for="urbano">Urbano</label><br> -->
+        </table>
+        <button type="submit">Create</button>
+    </form>
+<!--    <script src="{% static 'Imoveis/new.js' %}"></script>
+    <script src="{% static 'Imoveis/js/rango-query.js' %}"></script> -->
+{% endblock %}
